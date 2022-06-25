@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseURL = process.env.API_URL;
+const baseURL = "http://192.168.100.6:3000/api";
 let token = null;
 
 const requests = {
