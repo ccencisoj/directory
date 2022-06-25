@@ -1,0 +1,26 @@
+### Obtener directorios
+POST http://192.168.100.6:3000/api/directory/getDirectories
+Content-Type: application/json
+
+{
+  "token": "eyJhbGciOiJIUzI1NiJ9.eyJpZCI6IjYyYjc4MTUxZDdlZmIzNDU0ZTM2M2M0MCJ9.LeHtY9DdPw4708gI0Ho9Aha9fUUT8UsROcjdKgF4bR8"
+}
+
+### Crear directorio
+POST http://192.168.100.6:3000/api/directory/addDirectory
+Content-Type: application/json
+
+{
+  "path": "/bin/example.txt",
+  "type": "file",
+  "token": "eyJhbGciOiJIUzI1NiJ9.eyJpZCI6IjYyYjc4MTUxZDdlZmIzNDU0ZTM2M2M0MCJ9.LeHtY9DdPw4708gI0Ho9Aha9fUUT8UsROcjdKgF4bR8" 
+}
+
+### Eliminar directorio
+POST http://192.168.100.6:3000/api/directory/deleteDirectory
+Content-Type: application/json
+
+{
+  "directoryId": "62b7852ee62e2a80006f1695",
+  "token": "eyJhbGciOiJIUzI1NiJ9.eyJpZCI6IjYyYjc4MTUxZDdlZmIzNDU0ZTM2M2M0MCJ9.LeHtY9DdPw4708gI0Ho9Aha9fUUT8UsROcjdKgF4bR8" 
+}

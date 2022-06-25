@@ -1,0 +1,54 @@
+.button {
+  --color: #fff;
+  height: 48px;
+  display: flex;
+  cursor: pointer;
+  padding: 0px 24px;
+  border-radius: 5px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  
+  .icon {
+    width: 24px;
+    height: 24px;
+    color: var(--color);
+  }
+
+  .label {
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--color);
+  }
+}
+
+.primary {
+  background-color: var(--primary-color);
+}
+
+.primary:hover {
+  box-shadow: inset 0px -4px 12px #fff2;
+  background-color: var(--primary-color-hover); 
+}
+
+.primary:active {
+  background-color: var(--primary-color-active); 
+}
+
+.silver_theme {
+  --color: #999;
+}
+
+.silver_theme:hover {
+  --color: #aaa;
+}
+
+.silver_theme:active {
+  --color: #ccc;
+}
+
+.icon_button {
+  width: 48px;
+  height: 48px;
+  padding: 0px;
+}

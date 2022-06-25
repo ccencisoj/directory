@@ -1,0 +1,56 @@
+.file_card {
+  gap: 32px;
+  width: 100%;
+  display: flex;
+  cursor: pointer;
+  padding-left: 0px;
+  padding-right: 4px;
+  border-radius: 5px;
+  align-items: center;
+  flex-direction: row;
+  box-sizing: border-box;
+
+  .pathname {
+    flex: 1;
+    color: #999;
+    font-size: 18px;
+    overflow: hidden;
+    padding-left: 8px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .actions {
+    //hidden
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.file_card:hover {
+  background-color: var(--secondary-color);
+
+  .actions {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.file_card:active {
+  background-color: var(--secondary-color-active);
+}
+
+@media Only screen and (max-width: 640px) {
+  .folder_card {
+    .pathname {
+      font-size: 16px;
+    }
+  }
+}
+
+@media Only screen and (max-width: 540px) {
+  .file_card {
+    padding-left: 12px;
+    padding-right: 4px;
+  }
+}

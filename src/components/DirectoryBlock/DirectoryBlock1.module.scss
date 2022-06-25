@@ -1,0 +1,40 @@
+.directory_block {
+  width: 800px;
+  border-radius: 5px 5px;
+  background-color: var(--secondary-background);
+
+  .header {
+    width: 100%;
+    display: flex;
+    padding: 24px 24px;
+    box-sizing: border-box;
+    flex-direction: column;
+    border-bottom: 2px var(--border-color) solid;
+  }
+
+  .main {
+    width: 100%;
+    padding: 32px 24px;
+    box-sizing: border-box;
+  }
+}
+
+@media Only screen and (max-width: 850px) {
+  .directory_block {
+    width: calc(100% - 24px);
+  }
+}
+
+@media Only screen and (max-width: 540px) {
+  .directory_block {
+    width: 100%;
+
+    .header {
+      padding: 12px 12px;
+    }
+
+    .main {
+      padding: 24px 12px;
+    }
+  }
+}

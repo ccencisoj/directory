@@ -1,0 +1,62 @@
+.folder_card {
+  --color: #999;
+  width: 100%;
+  height: 48px;
+  display: flex;
+  cursor: pointer;
+  padding-right: 4px;
+  padding-left: 0px;
+  border-radius: 5px;
+  align-items: center;
+  flex-direction: row;
+  box-sizing: border-box;
+
+  .icon {
+    width: 24px;
+    height: 24px;
+    color: var(--color);
+  }
+
+  .pathname {
+    flex: 1;
+    color: var(--color);
+    font-size: 18px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .actions {
+    //hidden
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.folder_card:hover {
+  background-color: var(--secondary-color);
+
+  .actions {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.folder_card:active {
+  background-color: var(--secondary-color-active);
+}
+
+@media Only screen and (max-width: 640px) {
+  .folder_card {
+    .pathname {
+      font-size: 16px;
+    }
+  }
+}
+
+@media Only screen and (max-width: 540px) {
+  .folder_card {
+    padding: 0px 12px;
+    padding-right: 4px;
+  }
+}
