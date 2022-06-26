@@ -14,7 +14,7 @@ const App = (props)=> {
   const { Component, pageProps } = props;
 
   React.useEffect(()=> {
-    agent.get("/api/mongo").then((response)=> {
+    axios.get("/api/mongo").then((response)=> {
       console.log(response);
     });
 
