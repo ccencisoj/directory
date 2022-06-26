@@ -8,25 +8,9 @@ import { DirectoryProvider } from 'hooks/DirectoryContext';
 
 import "../../public/scss/reset.scss";
 import "../../public/scss/variables.scss";
-import agent from 'agent';
 
 const App = (props)=> {
   const { Component, pageProps } = props;
-
-  React.useEffect(()=> {
-    axios.get("/api/mongo").then((response)=> {
-      console.log(response);
-    });
-
-    axios.get("/api/example").then((response)=> {
-      console.log(response);
-    });
-
-  }, []);
-
-  return (
-    <div>hola mundo</div>
-  )
 
   return (
     <Provider store={store}>
