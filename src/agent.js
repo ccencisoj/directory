@@ -36,6 +36,5 @@ const Directory = {
 export default { 
   User,
   Directory,
-  token,
   setToken: (_token)=> token = _token
 };
