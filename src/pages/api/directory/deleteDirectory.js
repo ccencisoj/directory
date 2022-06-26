@@ -14,7 +14,7 @@ export default async (req, res)=> {
     if(directoryId == null)
       throw new PathError("It is required the directory id");
     
-    await Directory.deleteOne({user: user.id, id: directoryId});
+    await Directory.deleteOne({user: user.id, _id: directoryId});
 
     return res.json({deleted: true});
 

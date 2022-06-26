@@ -65,10 +65,11 @@ const DirectoryProvider = ({children})=> {
       throw `Could not find the path '${path}'`;
 
     agent.Directory.delete(directory.id).then(()=> {
-      setState(({directories, ...prevState})=> ({
-        ...prevState,
-        directories: directories.filter((dir)=> dir.id !== directory.id)
-      }));
+      setState(({directories, ...prevState})=> {
+        directories = directories.filter((dir)=> dir.id !== directory.id);
+        directories = orderBy(directories, ['path'],['asc']);
+        return {...prevState, directories: [...directories]};
+      });
     });
   }
 
