@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseURL = "http://192.168.100.6:3000/api";
+const baseURL = typeof location === "undefined" ? '' : `${location.origin}/api`;
 let token = null;
 
 const requests = {
